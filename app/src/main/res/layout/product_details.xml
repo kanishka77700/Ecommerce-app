@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:elevation="4dp"
+    tools:context=".ProductDetailsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/productdetailstoolbar"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:elevation="4dp"
+        app:menu="@menu/search_cart_menu"/>
+
+
+
+
+
+            <include layout="@layout/product_picture_layout" />
+
+            <include layout="@layout/rewards_inproductdetails_activity" />
+
+            <include layout="@layout/product_details_with_tab_view" />
+
+            <include layout="@layout/productdetailsinplaceofviewpager" />
+            <include layout="@layout/ratings"/>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        android:elevation="8dp"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:id="@+id/addtocartlayoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableEnd="@drawable/cart"
+                android:drawablePadding="8dp"
+                android:drawableTint="#000"
+                android:gravity="center"
+                android:text="ADD TO CART"
+                android:textColor="#000"
+                android:textSize="12sp"
+                android:textStyle="bold"
+               />
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/buynow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/orange"
+            android:stateListAnimator="@null"
+            android:text="buy now"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+           />
+    </LinearLayout>
+
+
+</RelativeLayout>

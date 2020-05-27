@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   android:background="@color/white"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="30dp"
+    android:elevation="3dp"
+   >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:background="@color/white"
+        android:id="@+id/r1"
+        android:layout_marginBottom="16dp"
+        android:elevation="3dp">
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Price Details"
+            android:id="@+id/pdhead"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
+            android:textSize="16sp"/>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/pdhead"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/itemsquentityinpricedetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider2"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Price(1 item)" />
+
+        <TextView
+            android:id="@+id/t2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/itemsquentityinpricedetails"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Delivery Fee" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:id="@+id/allitemspriceinpricedetails"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/divider2"
+            android:textColor="#000"
+            android:text="49,999/-"
+            android:layout_marginEnd="16dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:id="@+id/delicerycharges"
+            android:text="Free"
+            android:textColor="@color/realgreen"
+            android:layout_below="@id/allitemspriceinpricedetails"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"/>
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignStart="@id/t2"
+            android:layout_alignEnd="@id/delicerycharges"
+            android:layout_below="@id/t2"
+            android:layout_marginTop="16dp"
+            android:background="?android:attr/listDivider" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/totalamounttext"
+            android:text="Total Amount"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_below="@id/divider3"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider3"
+            android:text="49,999/-"
+            android:id="@+id/cartpricedetailstotalamount"
+            android:textColor="#000"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"/>
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/totalamounttext"
+            android:layout_marginTop="16dp"
+            android:background="?android:attr/listDivider" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="You will save 10,000/- on this order"
+            android:textColor="@color/realgreen"
+            android:layout_below="@id/divider4"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="16dp"
+            android:id="@+id/cartyouwillsaveamounttext"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           android:layout_below="@id/cartyouwillsaveamounttext"
+            android:padding="10dp"
+            android:background="#d6d6d6">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_verified_user_black_24dp"
+                android:id="@+id/verifypic"
+                android:padding="6dp"
+                android:tint="@color/ash1"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/verifypic"
+                android:id="@+id/safesecuretext"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="2dp"
+                android:textSize="12sp"
+                android:text="Safe and secure payments.Easy returns.100% Authentic products."/>
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:elevation="3dp"
+    android:background="@color/white">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Details"
+        android:textStyle="bold"
+        android:textColor="#b3b3b3"
+        android:background="#F4F1F1"
+        android:textSize="16sp"
+        android:id="@+id/prodetailsheadinplaceofviewtab"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/prodetailsheadinplaceofviewtab"
+        android:id="@+id/prodetailsTextinplaceofviewtab"
+        android:padding="16dp"
+        android:text="The personal and the autobiographical: The essayists that feel most comfortable in this pole write fragments of reflective autobiography and look at the world through the keyhole of anecdote and description.
+The objective, the factual, and the concrete particular: The essayists that write from this pole do not speak directly of themselves, but turn their attention outward to some literary or scientific or political theme. Their art consists of setting forth, passing judgment upon, and drawing general conclusions from the relevant data.
+    The abstract-universal: In this pole we find those essayists who do their work in the world of high abstractions, who are never personal and who seldom mention the particular facts of experience."
+        android:textColor="#000"/>
+
+
+</RelativeLayout>

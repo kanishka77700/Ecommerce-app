@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="3dp"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+   <com.google.android.material.tabs.TabLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:tabTextColor="#b3b3b3"
+       android:background="#F4F1F1"
+       app:tabSelectedTextColor="@color/colorPrimary"
+       app:tabIndicatorColor="@color/colorPrimary"
+       android:id="@+id/productdetailsinteriortablayout"
+       >
+
+       <com.google.android.material.tabs.TabItem
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+
+           android:text="Description" />
+       <com.google.android.material.tabs.TabItem
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Specifications"/>
+       <com.google.android.material.tabs.TabItem
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="More Info"/>
+
+
+   </com.google.android.material.tabs.TabLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:id="@+id/productdetailsinteriorviewpager"
+        android:layout_below="@id/productdetailsinteriortablayout"/>
+
+
+
+
+</RelativeLayout>

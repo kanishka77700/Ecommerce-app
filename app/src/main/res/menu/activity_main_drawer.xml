@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/home"
+            android:title="Home"
+            android:icon="@drawable/navhome"/>
+    </group>
+    <group>
+        <item android:id="@+id/chooselanguage"
+            android:title="Choose Language"
+            android:icon="@drawable/navchooselang"/>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/myorders"
+            android:icon="@drawable/myorders"
+            android:title="My Orders" />
+        <item
+            android:id="@+id/myrewards"
+            android:icon="@drawable/navmyrewards"
+            android:title="My Rewards" />
+        <item
+            android:id="@+id/mywishlist"
+            android:icon="@drawable/navwishlist"
+            android:title="My Wishlist" />
+        <item
+            android:id="@+id/mycart"
+            android:icon="@drawable/navcart"
+            android:title="My Cart" />
+        <item
+            android:id="@+id/myaccount"
+            android:icon="@drawable/navaccount"
+            android:title="My Account" />
+        <item
+            android:id="@+id/mynotifications"
+            android:icon="@drawable/navnotification"
+            android:title="My Notifications" />
+
+    </group>
+
+
+
+</menu>

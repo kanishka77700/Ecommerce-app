@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rewards_gradient"
+    android:id="@+id/rewardsinproductlayout"
+    android:layout_marginTop="8dp"
+    android:elevation="3dp"
+    android:layout_marginBottom="8dp"
+    >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/giftcard"
+        android:tint="@color/white"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:id="@+id/giftcardiconid"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textColor="@color/white"
+        android:id="@+id/rewardinproducttitle"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@id/giftcardiconid"
+        android:layout_marginLeft="8dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/giftcardiconid"
+        android:textColor="@color/white"
+        android:layout_margin="16dp"
+        android:text="Upto 12000 off on exchange domt miss the chance just go for it buy it in leass prize diwali reward"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        android:textSize="13sp"/>
+
+
+
+
+
+
+</RelativeLayout>

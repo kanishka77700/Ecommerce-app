@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <ImageView
+        android:id="@+id/mainuserimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:paddingTop="8dp"
+        app:srcCompat="@drawable/user" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:id="@+id/fullname"
+        android:layout_below="@id/mainuserimage"
+        android:text="Not SignedIn"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+     />
+
+    <TextView
+        android:id="@+id/mainuseremail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EmailAddress"
+        android:layout_below="@id/fullname"
+
+        android:textColor="@color/white"/>
+
+</RelativeLayout>

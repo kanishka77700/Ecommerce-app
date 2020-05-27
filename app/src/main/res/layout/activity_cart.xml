@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#d6d6d6"
+    android:elevation="3dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CartPageFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/toolbar"
+        app:layout_scrollFlags="enterAlwaysCollapsed"
+        android:background="@drawable/maingradientcolorbackground"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        style="@style/myTheme.ActionBar.Text"
+        app:menu="@menu/search"
+        android:elevation="4dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cartrecyclerview"
+        android:layout_marginTop="10dp"
+        android:layout_margin="8dp"
+        android:layout_below="@id/toolbar"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        android:elevation="16dp"
+       android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:id="@+id/addtocartlayoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/cart_totalamount"
+                android:layout_marginStart="16dp"
+                android:text="₹ 49,999/-"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="4dp"
+                android:text="Total amount"
+                android:textColor="@color/design_default_color_primary"
+                android:textStyle="bold" />
+
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/cart_continue"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+             android:backgroundTint="@color/orange"
+            android:stateListAnimator="@null"
+            android:text="Continue"
+            android:layout_gravity="center"
+            android:background="@drawable/quatityback"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+             />
+    </LinearLayout>
+
+
+</RelativeLayout>

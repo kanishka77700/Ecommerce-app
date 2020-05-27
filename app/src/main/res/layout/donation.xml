@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="3dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/donationbackgground"
+       android:padding="8dp" >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/donateicon"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/donateicon333"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="India Unites to Fight COVID-19"
+            android:id="@+id/donationhead"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="13dp"
+            android:layout_toRightOf="@id/donateicon"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="17sp"/>
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:id="@+id/donatenowbutton"
+            android:layout_below="@id/donationhead"
+            android:layout_marginLeft="13dp"
+            android:text="Donate Now >"
+            android:textSize="10sp"
+            android:layout_toRightOf="@id/donateicon"
+            android:textAllCaps="false"
+            android:textStyle="normal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bannersliderbackground"
+            android:backgroundTint="#6075EA"
+            android:textColor="@color/white"/>
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

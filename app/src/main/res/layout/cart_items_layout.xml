@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:background="@color/white"
+ android:layout_marginBottom="10dp"
+    android:elevation="3dp">
+
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/phone22"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/cartimage"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:layout_toLeftOf="@id/cartimage"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Realme 6 (Comet Blue, 128 GB)"
+        android:id="@+id/cartitemtitle"
+        android:textSize="16sp"
+        android:textColor="#000"/>
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/offer"
+        android:id="@+id/cartoffericon"
+         android:layout_below="@id/cartitemtitle"
+        android:layout_marginStart="8dp"
+
+        android:layout_marginTop="8dp"
+        android:tint="@color/realgreen"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:text="free couponsa"
+        android:textSize="12sp"
+        android:id="@+id/cartoffertext"
+        android:layout_toRightOf="@id/cartoffericon"
+        android:layout_below="@id/cartitemtitle"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="2dp"
+        android:textColor="@color/realgreen"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="₹49,999/-"
+          android:textSize="18sp"
+          android:textColor="#000"
+          android:layout_below="@id/cartoffertext"
+          android:layout_marginTop="16dp"
+          android:layout_marginStart="8dp"
+          android:id="@+id/cartproductprice"/>
+
+    <TextView
+        android:id="@+id/cartproductcuttedprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cartoffertext"
+       android:layout_marginTop="20dp"
+        android:layout_marginStart="8dp"
+
+        android:textSize="12sp"
+        android:layout_toRightOf="@id/cartproductprice"
+        android:text="₹59,000/-" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_below="@id/cartoffertext"
+        android:layout_marginEnd="-51dp"
+        android:layout_toStartOf="@id/cartproductcuttedprice"
+        android:layout_toEndOf="@id/cartproductcuttedprice"
+        android:layout_toRightOf="@id/cartproductprice" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="offers applied"
+        android:id="@+id/cartofferappliedtext"
+        android:textColor="@color/green"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="8dp"
+        android:textSize="12sp"
+        android:layout_below="@id/cartproductprice"
+        android:layout_marginStart="8dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="coupon applied"
+        android:textSize="12sp"
+        android:layout_marginBottom="16dp"
+        android:id="@+id/cartcouponappliedtext"
+        android:textColor="@color/orange"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/cartofferappliedtext"
+        android:layout_marginStart="8dp"
+        />
+
+    <TextView
+        android:id="@+id/cartproductquantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cartimage"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="8dp"
+        android:textColor="#000"
+        android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+        android:layout_alignEnd="@id/cartimage"
+        android:layout_alignStart="@id/cartimage"
+        android:gravity="center"
+        android:background="@drawable/quatityback"
+         android:padding="3dp"
+        android:drawablePadding="8dp"
+        android:text="Qty: 1" />
+
+
+
+
+
+</RelativeLayout>

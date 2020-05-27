@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:elevation="4dp">
+  <com.google.android.material.tabs.TabLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/white"
+      app:tabTextColor="#717070"
+      android:id="@+id/bottonavtablayout"
+      app:tabIconTint="#747a71"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentStart="true"
+      app:tabSelectedTextColor="@color/orange"
+      app:tabIndicatorColor="@color/orange"
+      app:tabIndicatorGravity="top"
+      app:tabMode="fixed"
+      app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+
+      >
+
+
+      <com.google.android.material.tabs.TabItem
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:icon="@drawable/botnavshop"
+          android:text="Shop"
+          android:textAlignment="center"
+          />
+      <com.google.android.material.tabs.TabItem
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:icon="@drawable/botnavcoin"
+          android:text="SuperCoin"
+          android:textAlignment="center"
+          />
+      <com.google.android.material.tabs.TabItem
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:icon="@drawable/botnavideas"
+          android:text="Ideas"
+          android:textAlignment="center"
+          />
+      <com.google.android.material.tabs.TabItem
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:icon="@drawable/botnavvideo"
+          android:text="Video"
+          android:textAlignment="center"
+          />
+      <com.google.android.material.tabs.TabItem
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:icon="@drawable/botnavgames"
+          android:text="Games"
+          android:textAlignment="center"
+          />
+
+
+  </com.google.android.material.tabs.TabLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+android:id="@+id/mainbottombarviewpager"
+        android:contextClickable="true"
+
+        android:layout_above="@id/bottonavtablayout"/>
+
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/homefloatingactionbutton"
+        android:src="@drawable/cart"
+      android:layout_above="@id/bottonavtablayout"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/orange"
+        android:theme="@style/Widget.MaterialComponents.FloatingActionButton"/>
+
+
+
+</RelativeLayout>
+
+
+
+

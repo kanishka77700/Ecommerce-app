@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1047720016914",
+    "firebase_url": "https://fashionstreet-456e0.firebaseio.com",
+    "project_id": "fashionstreet-456e0",
+    "storage_bucket": "fashionstreet-456e0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1047720016914:android:2e819de2cd3eb85bbceccb",
+        "android_client_info": {
+          "package_name": "com.romi.project.fashionstreet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1047720016914-e42lkrgtnt3e486qrrd6apq07tca6l1h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.romi.project.fashionstreet",
+            "certificate_hash": "0581ce282d6f472191a63e380cb9777c39e45b7a"
+          }
+        },
+        {
+          "client_id": "1047720016914-gu7kil3bvn2a18js148jt7d6ksp58vho.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCL9E24GWKK-nEzyGpfCMzPJe4V4S8Xnqk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1047720016914-gu7kil3bvn2a18js148jt7d6ksp58vho.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/shop"
+        android:title="Shop"
+        android:icon="@drawable/botnavshop"
+        />
+
+    <item android:id="@+id/supercoin"
+        android:title="SuperCoin"
+        android:icon="@drawable/botnavcoin"
+        />
+    <item android:id="@+id/ideas"
+        android:title="Ideas"
+        android:icon="@drawable/botnavideas" />
+
+    <item android:id="@+id/video"
+        android:title="Video"
+     android:icon="@drawable/botnavvideo" />
+    <item android:id="@+id/games"
+        android:title="Games"
+        android:icon="@drawable/botnavgames" />
+
+</menu>

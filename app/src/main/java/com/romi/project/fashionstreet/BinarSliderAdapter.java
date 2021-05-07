@@ -2,6 +2,7 @@ package com.romi.project.fashionstreet;
 
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,9 @@ import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 
 import java.util.List;
 
@@ -33,8 +37,9 @@ public class BinarSliderAdapter extends PagerAdapter {
       View view= LayoutInflater.from(container.getContext()).inflate(R.layout.banner_slider,container,false);
         ImageView bannerimage=view.findViewById(R.id.bannericons);
         LinearLayout bannerlayout=view.findViewById(R.id.bannerlayout);
-        bannerlayout.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor(bannerSliderModelList.get(position).getBannerbackgroundcolor())));
-        bannerimage.setImageResource(bannerSliderModelList.get(position).getBanners());
+    bannerlayout.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor(bannerSliderModelList.get(position).getBannerbackgroundcolor())));
+        Glide.with(container.getContext()).load(bannerSliderModelList.get(position).getBanners()).apply(new RequestOptions().placeholder(R.drawable.navhome)).into(bannerimage);
+
         container.addView(view);
         return view;
     }

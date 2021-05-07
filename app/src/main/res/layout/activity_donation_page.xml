@@ -5,38 +5,67 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/maingradientcolorbackground"
     android:elevation="3dp"
-    android:background="@drawable/donationback2"
     tools:context=".DonationPage">
-    <androidx.appcompat.widget.Toolbar
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/backnew"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/back"
+        />
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:elevation="6dp"
+    android:orientation="vertical">
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:id="@+id/donationpagetoolbar"
-        android:background="@color/colorPrimary"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        android:elevation="4dp" >
+        android:layout_height="wrap_content"
+        android:src="@drawable/mainicon"/>
 
-    </androidx.appcompat.widget.Toolbar>
-    <LinearLayout
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:elevation="3dp"
-        android:padding="8dp"
-        >
+        android:layout_height="wrap_content"
+        android:text="Street Mall Fund Camp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="23sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Donate to PM Cares Fund"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="23sp"/>
 
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="200dp"
-            android:id="@+id/innerdonationpic"
-            android:background="@drawable/bannersliderbackground"
-            android:src="@drawable/innerdonation4"
-            android:contentDescription="Pmcaresfund"/>
-    </LinearLayout>
 
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Donate"
+    android:layout_marginTop="30dp"
+    android:id="@+id/donatebutton"
+    android:textSize="15sp"
+    android:textColor="@color/white"
+    android:background="@drawable/newbutton"
+    android:layout_marginStart="24dp"
+    android:layout_marginEnd="24dp"
+    android:padding="8dp"
+    android:elevation="6dp"/>
+
+</LinearLayout>
 
 
 

@@ -5,14 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:background="@color/colorPrimary"
+    android:elevation="6dp"
+    android:background="@drawable/gradientcolornew"
     tools:context=".SplashActivity">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="FashionStreet"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:textSize="30sp"/>
+   <ImageView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:src="@drawable/mainicon"/>
 
 </RelativeLayout>

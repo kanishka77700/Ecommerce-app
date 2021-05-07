@@ -38,6 +38,10 @@
             android:id="@+id/mynotifications"
             android:icon="@drawable/navnotification"
             android:title="My Notifications" />
+        <item
+            android:id="@+id/signout"
+            android:icon="@drawable/ic_baseline_assignment_return_24"
+            android:title="Log out" />
 
     </group>
 

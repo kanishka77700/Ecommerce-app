@@ -18,7 +18,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class SignUpActivity extends AppCompatActivity {
-    EditText emailid,mobileno,password,fullname;
+    EditText emailid,firstname,mobileno,password,confirmpassword;
     Button createaccount;
     TextView haveanaccount;
     ProgressDialog progressDialog;
@@ -28,7 +28,8 @@ public class SignUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
         emailid=findViewById(R.id.registerdemailid);
-        fullname=findViewById(R.id.fullname);
+        confirmpassword=findViewById(R.id.registerconfirmpassword);
+        firstname=findViewById(R.id.registerfirstname);
         mobileno=findViewById(R.id.mobileno);
         password=findViewById(R.id.registeredpassword);
         createaccount=findViewById(R.id.createaccount);
@@ -47,24 +48,24 @@ public class SignUpActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String email=emailid.getText().toString().trim();
-                String full=fullname.getText().toString().trim();
                 String mobile=mobileno.getText().toString().trim();
                 String pass=password.getText().toString();
+                String cpass=confirmpassword.getText().toString();
                 if(TextUtils.isEmpty(email))
                 {
                     emailid.setError("Please enter email id");
                     emailid.requestFocus();
                 }
-                else if(TextUtils.isEmpty(full))
+                else if(TextUtils.isEmpty(cpass))
                 {
-                    fullname.setError("Please enter Full name");
-                    fullname.requestFocus();
+                    confirmpassword.setError("Please enter Confirm Password");
+                    confirmpassword.requestFocus();
                 }
-                else if((TextUtils.isEmpty(full)) && (TextUtils.isEmpty(email))) {
-                    fullname.setError("Please enter Full name");
+                else if((TextUtils.isEmpty(cpass)) && (TextUtils.isEmpty(email))) {
+                    confirmpassword.setError("Please enter Full name");
                     emailid.setError("Please enter email id");
                     emailid.requestFocus();
-                    fullname.requestFocus();
+                    confirmpassword.requestFocus();
                 }
 
                 else if(TextUtils.isEmpty(mobile))
@@ -72,11 +73,11 @@ public class SignUpActivity extends AppCompatActivity {
                     mobileno.setError("Please enter Mobile no");
                     mobileno.requestFocus();
                 }
-                else if((TextUtils.isEmpty(mobile)) && (TextUtils.isEmpty(full))) {
+                else if((TextUtils.isEmpty(mobile)) && (TextUtils.isEmpty(cpass))) {
                     mobileno.setError("Please enter Mobile no");
-                    fullname.setError("Please enter Full name");
+                    confirmpassword.setError("Please enter Confirm Password");
                     mobileno.requestFocus();
-                    fullname.requestFocus();
+                    confirmpassword.requestFocus();
                 }
 
                 else  if(TextUtils.isEmpty(pass))
@@ -94,6 +95,11 @@ public class SignUpActivity extends AppCompatActivity {
                 {
                     password.setError("Atleast 8 Characters");
                     password.requestFocus();
+                }
+                else if(!(pass.equals(cpass)))
+                {
+                    confirmpassword.setError("Please enter valid Password");
+                    confirmpassword.requestFocus();
                 }
                 else
                 {

@@ -19,6 +19,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.List;
@@ -91,7 +93,7 @@ public class HomePageMultipleLayoutAdapter extends RecyclerView.Adapter {
                 break;
 
                 case HomePageMultipleLayoutModel.stripad:
-                    int resource=homePageMultipleLayoutModelList.get(position).getResouce();
+                    String resource=homePageMultipleLayoutModelList.get(position).getResouce();
                     String color=homePageMultipleLayoutModelList.get(position).getBackgroundcolor();
                     ((StripAdViewHolder)holder).setStripAd(resource,color);
                     break;
@@ -110,7 +112,7 @@ public class HomePageMultipleLayoutAdapter extends RecyclerView.Adapter {
                                 ((BannerSliderViewHolder) holder).setBannersliderviewpager(bannerSliderModelList);
                                 break;
                                 case HomePageMultipleLayoutModel.covidpic:
-                                    int image=homePageMultipleLayoutModelList.get(position).getResouce();
+                                    int image=homePageMultipleLayoutModelList.get(position).getCovidpicresource();
                                     ((CovidpicViewHolder) holder).setCovidpic(image);
                                    break;
                                    case HomePageMultipleLayoutModel.categoryitems:
@@ -136,10 +138,10 @@ public class HomePageMultipleLayoutAdapter extends RecyclerView.Adapter {
             stripAdImage =itemView.findViewById(R.id.stripadicon);
             stripAdLayout=itemView.findViewById(R.id.stripadlayout);
         }
-        public void setStripAd(int resouce,String color)
+        public void setStripAd(String resource,String color)
         {
-            stripAdImage.setImageResource(resouce);
-            stripAdLayout.setBackgroundColor(Color.parseColor(color));
+            Glide.with(itemView.getContext()).load(resource).apply(new RequestOptions().placeholder(R.drawable.stripad)).into(stripAdImage);
+          //  stripAdLayout.setBackgroundColor(Color.parseColor(color));
         }
     }
 
@@ -197,7 +199,7 @@ public class HomePageMultipleLayoutAdapter extends RecyclerView.Adapter {
     public class BannerSliderViewHolder extends RecyclerView.ViewHolder {
 
         private ViewPager bannersliderviewpager;
-        public int currentbanner = 2;
+        public int currentbanner = 0;
         final private int DELAYTIME = 2000;
         final private int PEROIDTIME = 2000;
         private Timer timer;
@@ -251,14 +253,15 @@ public class HomePageMultipleLayoutAdapter extends RecyclerView.Adapter {
 
 
         }
-        public void bannerLooper(final List<BannerSliderModel> bannerSliderModelList) {
-            if (currentbanner == bannerSliderModelList.size() - 2) {
-                currentbanner = 2;
-                bannersliderviewpager.setCurrentItem(currentbanner, false);
-            } else if (currentbanner == 1) {
-                currentbanner = bannerSliderModelList.size() - 3;
+        public void bannerLooper( List<BannerSliderModel> bannerSliderModelList) {
+            if (currentbanner >= bannerSliderModelList.size()) {
+                currentbanner = 1;
                 bannersliderviewpager.setCurrentItem(currentbanner, false);
             }
+//            else if (currentbanner == 1) {
+//                currentbanner = bannerSliderModelList.size() - 3;
+//                bannersliderviewpager.setCurrentItem(currentbanner, false);
+//            }
         }
         private void startBannerSliderTimer(final List<BannerSliderModel> bannerSliderModelList) {
 
@@ -268,7 +271,7 @@ public class HomePageMultipleLayoutAdapter extends RecyclerView.Adapter {
                 public void run() {
                     if(currentbanner > bannerSliderModelList.size())
                     {
-                        currentbanner=1;
+                        currentbanner=0;
                     }
                     bannersliderviewpager.setCurrentItem(currentbanner++);
                 }

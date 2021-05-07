@@ -4,35 +4,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center_vertical"
-    android:background="@color/white"
-    android:padding="30dp"
-    tools:context=".OpenActivity">
+    android:orientation="vertical" tools:context=".OpenActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:padding="30dp"
+        android:elevation="6dp"
+        android:background="@drawable/gradientcolornew"
+>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mainicon"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Street Mall"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textSize="25sp"/>
+    </LinearLayout>
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/logoo"/>
+android:src="@drawable/welcomemain" />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Register"
         android:id="@+id/register"
         android:textColor="@color/white"
-        android:layout_marginTop="30dp"
+        android:elevation="6dp"
         android:textAllCaps="false"
-        android:textSize="17sp"
-        android:background="@drawable/fullorange"
+        android:textSize="15sp"
+        android:padding="12dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+
+        android:background="@drawable/newbutton"
+        android:layout_marginTop="30dp"
         />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Login"
+        android:elevation="6dp"
         android:textColor="@color/white"
         android:textAllCaps="false"
-        android:textSize="17sp"
+        android:textSize="15sp"
+        android:padding="12dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/fullorange"
+        android:background="@drawable/newbutton"
         android:id="@+id/login"/>
 
 

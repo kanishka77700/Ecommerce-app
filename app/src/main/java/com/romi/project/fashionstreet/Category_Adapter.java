@@ -11,6 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.facebook.shimmer.ShimmerFrameLayout;
 
 import java.util.List;
@@ -36,6 +38,7 @@ public class Category_Adapter extends RecyclerView.Adapter<Category_Adapter.View
      String name=categoryModelList.get(position).getCategorytext();
 
         holder.setCategoryPage(name);
+        holder.setCategoryItemIcon(icon);
 
 
 
@@ -60,7 +63,13 @@ public class Category_Adapter extends RecyclerView.Adapter<Category_Adapter.View
             categoryitemtext = itemView.findViewById(R.id.category_item_text);
         }
 
-        public void setCategoryItemIcon() {
+        public void setCategoryItemIcon(String url) {
+
+           if(url!=null) {
+               Glide.with(itemView.getContext()).load(url).apply(new RequestOptions().placeholder(R.drawable.navhome)).into(categoryitemicon);
+           }
+
+
 
         }
 

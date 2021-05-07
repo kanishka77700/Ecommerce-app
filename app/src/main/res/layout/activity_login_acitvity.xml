@@ -5,91 +5,141 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    android:background="@color/colorPrimary"
+    android:elevation="6dp"
     tools:context=".LoginAcitvity">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="100dp"
-        android:background="@drawable/buttons">
+        android:layout_gravity="center"
+        android:padding="30dp"
+        android:elevation="6dp"
+        android:background="@drawable/gradientcolornew"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mainicon"/>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="StreetMart"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textSize="25sp"/>
+    </LinearLayout>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email Id"
-            android:padding="15dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="40dp"
             android:id="@+id/emailid"
-            android:textColorHint="@color/black"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
             android:textColor="#0F0E06"
           android:drawableEnd="@drawable/email"
+            android:elevation="6dp"
             android:textSize="17sp"
+            android:padding="12dp"
+            android:background="@drawable/fullorange"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
             android:inputType="textEmailAddress"/>
 
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="16dp"
-            android:textSize="17sp"
+            android:layout_marginTop="15dp"
             android:drawableEnd="@drawable/password"
             android:textColor="#0F0E06"
-            android:padding="15dp"
-            android:textColorHint="@color/black"
+            android:elevation="6dp"
+            android:textSize="17sp"
+            android:padding="12dp"
+            android:background="@drawable/fullorange"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
             android:hint="Password"
             android:inputType="textPassword" />
         <TextView
             android:id="@+id/forgotpassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="200dp"
             android:textColor="@color/black"
+            android:layout_marginStart="24dp"
+            android:padding="8dp"
             android:layout_marginTop="10dp"
             android:text="ForgotPassword ?"
-            android:textSize="17sp" />
+            android:textSize="15sp" />
         <Button
             android:id="@+id/signin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/fullorange"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/newbutton"
             android:text="Log In"
             android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textAllCaps="false" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="-------------------  or  -------------------"
-            android:textColor="@color/black"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"/>
-
-        <TextView
-            android:id="@+id/donthaveanaccount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="16dp"
-            android:textColor="@color/black"
-            android:layout_gravity="center"
-            android:text="Don't have an acoount? Sign up? "
+            android:elevation="6dp"
             android:textSize="17sp"
-            />
+            android:padding="12dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:textAllCaps="false" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-------------------  or  -------------------"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"/>
+
+    <com.shobhitpuri.custombuttons.GoogleSignInButton
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/googlesigninbutton"
+        android:text="Sign up with Google"
+        android:textStyle="normal"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:textSize="17sp"
+        android:elevation="6dp"
+        app:isDarkTheme="false" />
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/facebooklogin_button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:textStyle="normal"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:textSize="17sp"
+        android:text="Sign up with Facebook"
+        android:textAllCaps="false"
+        android:elevation="6dp"/>
+
+
+
+        <Button
+            android:id="@+id/donthaveanaccount"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="30dp"
+            android:layout_gravity="center"
+            android:textStyle="normal"
+            android:drawableStart="@drawable/emailwhite"
+            android:text="Sign Up with Email "
+            android:textColor="@color/white"
+            android:elevation="6dp"
+            android:textSize="17sp"
+            android:background="@drawable/gradientcolornew"
+            android:padding="2dp"
+
+            android:textAllCaps="false"/>
 
 
     </LinearLayout>
-</LinearLayout>

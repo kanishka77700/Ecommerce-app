@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="6dp"
+    android:orientation="vertical"
+    tools:context=".OrderPlaced">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:elevation="6dp"
+android:background="@drawable/gradientcolornew">
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:elevation="6dp"
+    android:src="@drawable/orderplacedimage"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thank You"
+            android:textStyle="bold"
+            android:textSize="25sp"
+           android:gravity="center"
+            android:textColor="@color/white"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your Order has been Placed"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_margin="15dp"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/orderid"
+        android:text="Order ID: 102975647"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="You will shortly receive your order confirmation Message and Email"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+       android:layout_margin="10dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Expected Delivery within 4-6 days"
+        android:textColor="@color/colorPrimary"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="70dp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/continueshoppingimage"
+        android:src="@drawable/shopcontinue"
+        android:layout_marginTop="40dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/continueshopping"
+        android:text="Continue Shopping"
+        android:textSize="15sp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+
+    </LinearLayout>
+
+

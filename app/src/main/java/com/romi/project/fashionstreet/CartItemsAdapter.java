@@ -14,6 +14,9 @@ import java.util.List;
 public class CartItemsAdapter extends RecyclerView.Adapter {
 List<CartItemsModel> cartItemsModelList;
 
+
+
+
     public CartItemsAdapter(List<CartItemsModel> cartItemsModelList) {
         this.cartItemsModelList = cartItemsModelList;
     }
@@ -65,6 +68,8 @@ List<CartItemsModel> cartItemsModelList;
                 String productpricetext=cartItemsModelList.get(position).getProductprice();
                 String productcuttedpricetext=cartItemsModelList.get(position).getProductcuttedprice();
                 int offerappliedno=cartItemsModelList.get(position).getOfferapplied();
+
+
 
                 ((productdetailsViewholder) holder).setcartProductdetails(resource,title,offerno,productpricetext,productcuttedpricetext,offerappliedno);
                 break;

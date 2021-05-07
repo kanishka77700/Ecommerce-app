@@ -1,11 +1,14 @@
 package com.romi.project.fashionstreet;
 
 
+import android.accounts.Account;
+import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -17,6 +20,7 @@ import android.view.animation.AnimationUtils;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,45 +35,82 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.squareup.picasso.Picasso;
 
 import java.util.Objects;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     Toolbar toolbar,toolbar2;
     DrawerLayout drawerLayout;
     private TabLayout mainbottombartablayout;
     private ViewPager mainbottombarViewPager;
+    private GoogleSignInClient googleSignInClient;
     private EditText mainSearch;
   private  FirebaseAuth firebaseAuth;
  private   FirebaseUser firebaseUser;
  private long backpressedtime;
  private Toast doubleback;
+ GoogleSignInAccount account;
     NavigationView navigationView;
     ActionBarDrawerToggle actionBarDrawerToggle;
-    TextView navfullname,navemail;
+    TextView navfullname,navemail,textView;
     FrameLayout frameLayout;
     TabLayout botnavtab;
     BottomNavigationView bottomNavigationView;
     private FloatingActionButton mainCartFAB;
+CircleImageView navphoto;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         firebaseAuth = FirebaseAuth.getInstance();
-        firebaseUser = firebaseAuth.getCurrentUser();
-        navfullname = findViewById(R.id.fullname);
-        navemail = findViewById(R.id.mainuseremail);
+        firebaseUser=firebaseAuth.getCurrentUser();
+
+
+account =GoogleSignIn.getLastSignedInAccount(this);
+
+
+
+
+
+
+        googleSignInClient =GoogleSignIn.getClient(this,GoogleSignInOptions.DEFAULT_SIGN_IN);
+
+
         toolbar = findViewById(R.id.toolbar);
         toolbar2=findViewById(R.id.toolbar2);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("StreetMart");
+
+
+
+
         navigationView = findViewById(R.id.nav_view);
+        View headernavview=navigationView.getHeaderView(0);
+        navfullname=(TextView)headernavview.findViewById(R.id.fullname);
+        navphoto=headernavview.findViewById(R.id.navimage);
+
+        if(firebaseUser!=null) {
+            addNavDetails(firebaseUser.getDisplayName(),firebaseUser.getPhotoUrl().toString());
+
+        }
+
+
         drawerLayout = findViewById(R.id.drawer_layout);
         frameLayout=findViewById(R.id.contentmain);
         mainSearch=findViewById(R.id.mainsearch);
@@ -100,8 +141,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             public void onClick(View view) {
                 if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
                     drawerLayout.closeDrawer(GravityCompat.START);
+
+
+
                 } else {
                     drawerLayout.openDrawer(GravityCompat.START);
+
                 }
             }
         });
@@ -150,6 +195,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
+    private void addNavDetails(String displayName, String photoUrl) {
+
+        navfullname.setText("Hello" + " " + displayName);
+
+        if(!(photoUrl.isEmpty()))
+        {
+            Picasso.get().load(photoUrl).into(navphoto);
+
+        }
+
+
+    }
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater=getMenuInflater();
@@ -192,6 +251,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         {
             case R.id.mycart :
                 gotocart();
+                 return true;
+            case R.id.signout:
+                firebaseAuth.signOut();
+googleSignInClient.signOut();
+                finish();
+                return true;
+
+
+            case R.id.myaccount:
+                Intent intent=new Intent(MainActivity.this,MyAccountFragment.class);
+                startActivity(intent);
                 return true;
         }
 
@@ -204,6 +274,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     {
         getSupportFragmentManager().beginTransaction().replace(frameLayout.getId(),fragment).commit();
     }
+
+
+
 
     }
 

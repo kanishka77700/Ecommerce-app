@@ -72,21 +72,21 @@ class HomePageMultipleLayoutModel {
     //////////////BannerSlider!/////////////////////
     ///////////////Stripad////////////
 
-    private int resouce;
+    private String resouce;
     private String backgroundcolor;
 
-    public HomePageMultipleLayoutModel(int type, int resouce, String backgroundcolor) {
+    public HomePageMultipleLayoutModel(int type, String resouce, String backgroundcolor) {
         this.resouce = resouce;
         this.backgroundcolor = backgroundcolor;
         this.type=type;
     }
 
 
-    public int getResouce() {
+    public String getResouce() {
         return resouce;
     }
 
-    public void setResouce(int resouce) {
+    public void setResouce(String resouce) {
         this.resouce = resouce;
     }
 
@@ -136,14 +136,22 @@ class HomePageMultipleLayoutModel {
     ////////////////gridviewitems/////////////////////
     ////////////////covidpic/////////////////////
 
-    public HomePageMultipleLayoutModel(int type, int resouce) {
+    private int covidpicresource;
+    public HomePageMultipleLayoutModel(int type, int covidpicresource) {
         this.type = type;
-        this.resouce = resouce;
+        this.covidpicresource=covidpicresource;
+
     }
 
+    public int getCovidpicresource() {
+        return covidpicresource;
+    }
 
+    public void setCovidpicresource(int covidpicresource) {
+        this.covidpicresource = covidpicresource;
+    }
 
-    ////////////////covidpic/////////////////////
+////////////////covidpic/////////////////////
 
 
 

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@drawable/fullorange"
+    android:layout_margin="16dp"
+    android:elevation="6dp"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bannersliderbackground"
+        android:layout_margin="16dp"
+        android:padding="8dp"
+        android:elevation="6dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update Details"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editTextTextfirstname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:hint="FirstName"
+        android:backgroundTint="#2A8F8D8B"
+        android:textAlignment="center"
+        android:inputType="text"
+        android:padding="6dp"
+        android:background="@drawable/bannersliderbackground"
+        />
+
+    <EditText
+        android:id="@+id/editTextemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:textColor="@color/black"
+        android:hint="Email Id"
+        android:textSize="16sp"
+        android:backgroundTint="#2A8F8D8B"
+        android:textAlignment="center"
+        android:inputType="textEmailAddress"
+        android:padding="6dp"
+        android:background="@drawable/bannersliderbackground"
+
+         />
+
+    <EditText
+        android:id="@+id/editTextphone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:backgroundTint="#2A8F8D8B"
+
+        android:hint="Mobile no"
+        android:textAlignment="center"
+        android:inputType="phone"
+        android:padding="6dp"
+        android:background="@drawable/bannersliderbackground"
+        />
+
+    <EditText
+        android:id="@+id/editTextTextAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:textColor="@color/black"
+        android:hint="Postal Address"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:backgroundTint="#2A8F8D8B"
+
+        android:inputType="text"
+        android:padding="6dp"
+        android:background="@drawable/bannersliderbackground"
+       />
+
+    <EditText
+        android:id="@+id/editTextpincode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:textColor="@color/black"
+        android:hint="Pincode"
+        android:textSize="16sp"
+        android:backgroundTint="#2A8F8D8B"
+        android:textAlignment="center"
+        android:inputType="number"
+        android:padding="6dp"
+        android:background="@drawable/bannersliderbackground"
+       />
+
+    <EditText
+        android:id="@+id/editTextstate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:textColor="@color/black"
+        android:hint="State"
+        android:textSize="16sp"
+        android:backgroundTint="#2A8F8D8B"
+        android:textAlignment="center"
+        android:inputType="textEmailAddress"
+        android:padding="6dp"
+        android:background="@drawable/bannersliderbackground"
+      />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/save"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:background="@drawable/newbutton"
+        android:textColor="@color/white"
+        android:padding="8dp"
+        android:elevation="6dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="12dp"/>
+
+
+</LinearLayout>

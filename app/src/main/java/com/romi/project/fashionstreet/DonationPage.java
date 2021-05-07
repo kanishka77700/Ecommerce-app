@@ -12,23 +12,26 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 
 public class DonationPage extends AppCompatActivity {
-    Toolbar toolbar;
-    ImageView innerdonationpic;
-
+Button donate;
+ImageView back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donation_page);
-        toolbar=findViewById(R.id.donationpagetoolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("PM Cares Fund");
-        getSupportActionBar().setSubtitle("Donate For a Cause");
-       innerdonationpic =findViewById(R.id.innerdonationpic);
-       innerdonationpic.setOnClickListener(new View.OnClickListener() {
+       donate=findViewById(R.id.donatebutton);
+       back=findViewById(R.id.back);
+       back.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+
+               finish();
+           }
+       });
+       donate.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
                Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://paytm.com/helpinghand/pm-cares-fund"));

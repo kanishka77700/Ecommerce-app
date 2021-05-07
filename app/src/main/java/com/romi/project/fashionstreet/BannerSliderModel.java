@@ -2,19 +2,19 @@ package com.romi.project.fashionstreet;
 
 public class BannerSliderModel {
 
-    private int banners;
+    private String banners;
     private String bannerbackgroundcolor;
 
-    public BannerSliderModel(int banners, String bannerbackgroundcolor) {
+    public BannerSliderModel(String banners, String bannerbackgroundcolor) {
         this.banners = banners;
         this.bannerbackgroundcolor = bannerbackgroundcolor;
     }
 
-    public int getBanners() {
+    public String getBanners() {
         return banners;
     }
 
-    public void setBanners(int banners) {
+    public void setBanners(String banners) {
         this.banners = banners;
     }
 

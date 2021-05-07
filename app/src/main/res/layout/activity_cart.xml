@@ -13,7 +13,7 @@
         android:layout_height="?attr/actionBarSize"
         android:id="@+id/toolbar"
         app:layout_scrollFlags="enterAlwaysCollapsed"
-        android:background="@drawable/maingradientcolorbackground"
+        android:background="@drawable/gradientcolornew"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         style="@style/myTheme.ActionBar.Text"
@@ -54,9 +54,9 @@
                 android:layout_height="wrap_content"
                 android:drawablePadding="8dp"
                 android:layout_gravity="center_vertical"
-                android:id="@+id/cart_totalamount"
+                android:id="@+id/carttotalamount"
                 android:layout_marginStart="16dp"
-                android:text="₹ 49,999/-"
+                android:text="₹ 49999/-"
                 android:textColor="#000"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -65,6 +65,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
                 android:gravity="center"
+                android:id="@+id/totalamountfinal"
                 android:layout_marginStart="16dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginTop="4dp"
@@ -94,5 +95,5 @@
              />
     </LinearLayout>
 
-
 </RelativeLayout>
+

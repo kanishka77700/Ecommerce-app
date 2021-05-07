@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">FashionStreet</string>
     <string name="open">open</string>
+    <string name="facebook_app_id">790252141607271</string>
+    <string name="fb_login_protocol_scheme">fb790252141607271</string>
+
     <string name="title_activity_main">MainActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
